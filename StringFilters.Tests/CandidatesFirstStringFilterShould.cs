@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using FluentAssertions;
 using NUnit.Framework;
 
@@ -25,6 +26,20 @@ namespace StringFilters.Tests
         public void ReturnCorrectResults()
         {
             this.filter.Filter(this.source).ShouldBeEquivalentTo(this.expected);
+        }
+
+        [Test]
+        public void NotIncludeCandidatesThatCannotBeFormedWithNonCandidates()
+        {
+            var extraCandidates = new []
+                          {
+                              "aaaaaa",
+                              "bbbbbb"
+                          };
+            var newSource = this.source.Concat(extraCandidates);
+            this.filter.Filter(newSource)
+                .Should()
+                .NotContain(extraCandidates);
         }
 
         private IEnumerable<string> source = new[]
