@@ -48,11 +48,12 @@ namespace StringFilters
             return results;
 
             /*
-             *  Four loops ?
              *  Although this solution reduces the number of items in each loop to a minimum first
              *  can't help thinking there are too many loops.
              *  
              *  Don't like that I have to protect against duplicates
+             *  
+             *  It's readable though
              * */
         }
     }
