@@ -21,9 +21,10 @@ namespace StringFilters
                    select candidate;
 
             /*
-             *  My preferred approach, but LINQ isn't always the most performant
-             *  Could probably be optimised some more or converted to method syntax
-             *  if this is preferred
+             *  Nice clean and simple code (if you are familiar with LINQ), but LINQ isn't always the most performant
+             *  Could probably be optimised some more
+             *  
+             *  As expected turns out to be the slowest in perf tests
              */
         }
     }

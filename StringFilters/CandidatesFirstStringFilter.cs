@@ -35,12 +35,13 @@ namespace StringFilters
                             continue;
                         }
 
-                        if((candidate.StartsWith(outer) && candidate.EndsWith(inner))
-                           || (candidate.StartsWith(inner) && candidate.EndsWith(outer)))
+                        if((!candidate.StartsWith(outer) || !candidate.EndsWith(inner))
+                           && (!candidate.StartsWith(inner) || !candidate.EndsWith(outer)))
                         {
-                            results.Add(candidate);
-                            added = true;
+                            continue;
                         }
+                        results.Add(candidate);
+                        added = true;
                     }
                 }
             }

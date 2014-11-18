@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 
 namespace StringFilters
@@ -22,7 +21,7 @@ namespace StringFilters
 
                 foreach(var inner in sourceArray)
                 {
-                    if (inner.Length >= 6 || outer.Equals(inner) || (outer.Length + inner.Length) != 6)
+                    if(inner.Length >= 6 || outer.Equals(inner) || (outer.Length + inner.Length) != 6)
                     {
                         continue;
                     }
@@ -42,8 +41,7 @@ namespace StringFilters
                 {
                     if(item.Equals(potential))
                     {
-                        Debug.Print(item + ":" + potential);
-                        results.Add(item);  
+                        results.Add(item);
                     }
                 }
             }
@@ -57,6 +55,8 @@ namespace StringFilters
              *  Better tha I don't have to uglify code to protect against duplicates
              *  
              *  It's readable though
+             *  
+             *  Second fastest in tests, but my preferred approach
              * */
         }
     }

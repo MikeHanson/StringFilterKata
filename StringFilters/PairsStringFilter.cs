@@ -49,9 +49,13 @@ namespace StringFilters
             return results;
 
             /*
-             * Have to confess this one is based on a stack flow answer found when searching
-             * for a better solution than any I had come up with, elegant but still four loops
-             * and iterating source list three times
+             * Have to confess this one is based on this http://stackoverflow.com/questions/7662589/filter-a-list-of-strings-in-c-sharp stack flow answer I found when searching for a better solution than the two I had come up with, elegant but still four loops
+             * and iterating source list three times.
+             * 
+             * Turns out to be the consistently faster than any of the other approaches, although only
+             * marginally better than the potentials approach, however I am not sure I like the use
+             * of KeyValuePair, if I picked this up in six months I would be wondering why, but can't argue
+             * with the performance
              */
         }
     }
