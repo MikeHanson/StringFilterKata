@@ -31,7 +31,7 @@ namespace StringFilters.Tests
                                              {
                                                  "al", "albums", "aver", "bar", "barely", "be", "befoul", "bums", "by",
                                                  "cat", "con", "convex", "ely", "foul", "here", "hereby", "jig", "jigsaw",
-                                                 "or", "saw", "tail", "tailor", "vex", "we", "weaver2"
+                                                 "or", "saw", "tail", "tailor", "vex", "we", "weaver"
                                              };
 
         private IEnumerable<string> expected = new[]
