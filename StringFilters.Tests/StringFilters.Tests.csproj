@@ -48,6 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LinqStringFilter.cs" />
     <Compile Include="PairsStringFilter.cs" />
     <Compile Include="StringFilterTestBase.cs" />
     <Compile Include="CandidatesFirstStringFilterShould.cs" />
