@@ -21,6 +21,12 @@ namespace StringFilters.Tests
                 .BeAssignableTo<IStringFilter>();
         }
 
+        [Test]
+        public void ReturnCorrectResults()
+        {
+            this.filter.Filter(this.source).ShouldBeEquivalentTo(this.expected);
+        }
+
         private IEnumerable<string> source = new[]
                                              {
                                                  "al", "albums", "aver", "bar", "barely", "be", "befoul", "bums", "by",
